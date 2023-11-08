@@ -1,4 +1,4 @@
-from backbones.iresnet import iresnet18, iresnet34, iresnet50
+from .iresnet import iresnet18, iresnet34, iresnet50
 
 def get_model(name, **kwargs):
     # resnet
@@ -8,5 +8,5 @@ def get_model(name, **kwargs):
         return iresnet34(False, **kwargs)
     elif name == 'r50':
         return iresnet50(False, **kwargs)
-    
-    
+    else:
+        raise ValueError()

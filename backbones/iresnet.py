@@ -7,15 +7,26 @@ using_ckpt = False
 
 def conv3x3(in_planes, out_planes, stride=1, groups=1, dilation=1):
     """3x3 convolution with padding"""
-    return nn.Conv2d(in_planes, out_planes, kernel_size=3, stride=stride, groups=groups, bias=False, dilation=dilation)
+    return nn.Conv2d(in_planes, 
+                     out_planes, 
+                     kernel_size=3, 
+                     stride=stride, 
+                     groups=groups, 
+                     bias=False, 
+                     dilation=dilation)
 
 def conv1x1(in_planes, out_planes, stride=1):
     """1x1 convolution"""
-    return nn.Conv2d(in_planes, out_planes, kernel_size=1, stride=stride, bias=False)
+    return nn.Conv2d(in_planes, 
+                     out_planes, 
+                     kernel_size=1, 
+                     stride=stride, 
+                     bias=False)
 
 class IBasicBlock(nn.Module):
     expansion = 1
-    def __init__(self, inplanes, planes, stride=1, downsample=None, groups=1, base_width=64, dilation=1):
+    def __init__(self, inplanes, planes, stride=1, downsample=None, 
+                 groups=1, base_width=64, dilation=1):
         super(IBasicBlock, self).__init__()
         if groups != 1 or base_width != 64:
             raise ValueError('BasicBlock only supports groups=1 and base_width=64')
@@ -71,10 +82,22 @@ class IResNet(nn.Module):
         self.conv1 = nn.Conv2d(3, self.inplanes, kernel_size=3, stride=1, padding=1, bias=False)
         self.bn1 = nn.BatchNorm2d(self.inplanes, eps=1e-05)
         self.prelu = nn.PReLU(self.inplanes)
-        self.layer1 = self._make_layer(block, 64, layers[0], stride=2)
-        self.layer2 = self._make_layer(block, 128, layers[1], stride=2, dilate=replace_stride_with_dilation[0])
-        self.layer3 = self._make_layer(block, 256, layers[2], stride=2, dilate=replace_stride_with_dilation[1])
-        self.layer4 = self._make_layer(block, 512, layers[3], stride=2, dilate=replace_stride_with_dilation[2])
+        self.layer1 = self._make_layer(block, 
+                                       64, 
+                                       layers[0], 
+                                       stride=2)
+        self.layer2 = self._make_layer(block, 128, 
+                                       layers[1], 
+                                       stride=2, 
+                                       dilate=replace_stride_with_dilation[0])
+        self.layer3 = self._make_layer(block, 256, 
+                                       layers[2], 
+                                       stride=2, 
+                                       dilate=replace_stride_with_dilation[1])
+        self.layer4 = self._make_layer(block, 512, 
+                                       layers[3], 
+                                       stride=2, 
+                                       dilate=replace_stride_with_dilation[2])
         self.bn2 = nn.BatchNorm2d(512 * block.expansion, eps=1e-05)
         self.dropout = nn.Dropout(p=dropout, inplace=True)
         self.fc = nn.Linear(512 * block.expansion * self.fc_scale, num_features)
@@ -111,7 +134,11 @@ class IResNet(nn.Module):
         self.inplanes = planes * block.expansion
         for _ in range(1, blocks):
             layers.append(
-                block(self.inplanes, planes, groups=self.groups, base_width=self.base_width, dilation=self.dilation))
+                block(self.inplanes, 
+                      planes, 
+                      groups=self.groups, 
+                      base_width=self.base_width, 
+                      dilation=self.dilation))
             
         return nn.Sequential(*layers)
     
@@ -130,19 +157,20 @@ class IResNet(nn.Module):
         x = self.fc(x.float() if self.fp16 else x)
         x = self.features(x)
         return x
-    
-    def _iresnet(arch, block, layers, pretrained, progress, **kwargs):
-        model = IResNet(block, layers, **kwargs)
-        if pretrained:
-            raise ValueError()
-        return model
-    
-    def iresnet18(pretrained=False, progress=True, **kwargs):
-        return _iresnet('iresnet18', IBasicBlock, [2, 2, 2, 2], pretrained, progress, **kwargs)
-    
-    def iresnet34(pretrained=False, progress=True, **kwargs):
-        return _iresnet('iresnet34', IBasicBlock, [3, 4, 6, 3], pretrained, progress, **kwargs)
-    
-    def iresnet50(pretrained=False, progress=True, **kwargs):
-        return _iresnet('iresnet50', IBasicBlock, [3, 4, 14, 3], pretrained, progress, **kwargs)
+
+
+def _iresnet(arch, block, layers, pretrained, progress, **kwargs):
+    model = IResNet(block, layers, **kwargs)
+    if pretrained:
+        raise ValueError()
+    return model
+
+def iresnet18(pretrained=False, progress=True, **kwargs):
+    return _iresnet('iresnet18', IBasicBlock, [2, 2, 2, 2], pretrained, progress, **kwargs)
+
+def iresnet34(pretrained=False, progress=True, **kwargs):
+    return _iresnet('iresnet34', IBasicBlock, [3, 4, 6, 3], pretrained, progress, **kwargs)
+
+def iresnet50(pretrained=False, progress=True, **kwargs):
+    return _iresnet('iresnet50', IBasicBlock, [3, 4, 14, 3], pretrained, progress, **kwargs)
     

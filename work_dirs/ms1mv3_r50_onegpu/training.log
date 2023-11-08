@@ -1,0 +1,160 @@
+Training: 2023-11-06 17:47:55,880-rank_id: 0
+Training: 2023-11-06 17:48:50,356-rank_id: 0
+Training: 2023-11-06 17:50:02,171-rank_id: 0
+Training: 2023-11-06 17:51:19,188-rank_id: 0
+Training: 2023-11-06 17:52:34,583-rank_id: 0
+Training: 2023-11-06 17:52:37,782-: margin_list              [1.0, 0.5, 0.0]
+Training: 2023-11-06 17:52:37,782-: network                  r50
+Training: 2023-11-06 17:52:37,782-: resume                   False
+Training: 2023-11-06 17:52:37,782-: save_all_states          False
+Training: 2023-11-06 17:52:37,782-: output                   work_dirs\ms1mv3_r50_onegpu
+Training: 2023-11-06 17:52:37,782-: embedding_size           512
+Training: 2023-11-06 17:52:37,782-: sample_rate              1.0
+Training: 2023-11-06 17:52:37,788-: interclass_filtering_threshold0
+Training: 2023-11-06 17:52:37,788-: fp16                     True
+Training: 2023-11-06 17:52:37,788-: batch_size               128
+Training: 2023-11-06 17:52:37,788-: optimizer                sgd
+Training: 2023-11-06 17:52:37,788-: lr                       0.02
+Training: 2023-11-06 17:52:37,788-: momentum                 0.9
+Training: 2023-11-06 17:52:37,788-: weight_decay             0.0005
+Training: 2023-11-06 17:52:37,788-: verbose                  2000
+Training: 2023-11-06 17:52:37,788-: frequent                 10
+Training: 2023-11-06 17:52:37,788-: dali                     False
+Training: 2023-11-06 17:52:37,788-: dali_aug                 False
+Training: 2023-11-06 17:52:37,788-: gradient_acc             1
+Training: 2023-11-06 17:52:37,788-: seed                     2048
+Training: 2023-11-06 17:52:37,788-: num_workers              2
+Training: 2023-11-06 17:52:37,788-: wandb_key                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Training: 2023-11-06 17:52:37,788-: suffix_run_name          None
+Training: 2023-11-06 17:52:37,788-: using_wandb              False
+Training: 2023-11-06 17:52:37,788-: wandb_entity             entity
+Training: 2023-11-06 17:52:37,788-: wandb_project            project
+Training: 2023-11-06 17:52:37,788-: wandb_log_all            True
+Training: 2023-11-06 17:52:37,788-: save_artifacts           False
+Training: 2023-11-06 17:52:37,788-: wandb_resume             False
+Training: 2023-11-06 17:52:37,788-: rec                      train_dataset/ms1m-retinaface-t1
+Training: 2023-11-06 17:52:37,788-: num_classes              93431
+Training: 2023-11-06 17:52:37,788-: num_image                5179510
+Training: 2023-11-06 17:52:37,788-: num_epoch                20
+Training: 2023-11-06 17:52:37,788-: warmup_epoch             0
+Training: 2023-11-06 17:52:37,788-: val_targets              ['lfw', 'cfp_fp', 'agedb_30']
+Training: 2023-11-06 17:52:37,788-: total_batch_size         128
+Training: 2023-11-06 17:52:37,788-: warmup_step              0
+Training: 2023-11-06 17:52:37,788-: total_step               809280
+Training: 2023-11-06 17:53:13,035-rank_id: 0
+Training: 2023-11-06 17:53:16,194-: margin_list              [1.0, 0.5, 0.0]
+Training: 2023-11-06 17:53:16,194-: network                  r50
+Training: 2023-11-06 17:53:16,194-: resume                   False
+Training: 2023-11-06 17:53:16,194-: save_all_states          False
+Training: 2023-11-06 17:53:16,194-: output                   work_dirs\ms1mv3_r50_onegpu
+Training: 2023-11-06 17:53:16,194-: embedding_size           512
+Training: 2023-11-06 17:53:16,194-: sample_rate              1.0
+Training: 2023-11-06 17:53:16,194-: interclass_filtering_threshold0
+Training: 2023-11-06 17:53:16,194-: fp16                     True
+Training: 2023-11-06 17:53:16,194-: batch_size               128
+Training: 2023-11-06 17:53:16,194-: optimizer                sgd
+Training: 2023-11-06 17:53:16,194-: lr                       0.02
+Training: 2023-11-06 17:53:16,194-: momentum                 0.9
+Training: 2023-11-06 17:53:16,194-: weight_decay             0.0005
+Training: 2023-11-06 17:53:16,194-: verbose                  2000
+Training: 2023-11-06 17:53:16,194-: frequent                 10
+Training: 2023-11-06 17:53:16,194-: dali                     False
+Training: 2023-11-06 17:53:16,194-: dali_aug                 False
+Training: 2023-11-06 17:53:16,194-: gradient_acc             1
+Training: 2023-11-06 17:53:16,194-: seed                     2048
+Training: 2023-11-06 17:53:16,194-: num_workers              2
+Training: 2023-11-06 17:53:16,194-: wandb_key                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Training: 2023-11-06 17:53:16,194-: suffix_run_name          None
+Training: 2023-11-06 17:53:16,194-: using_wandb              False
+Training: 2023-11-06 17:53:16,194-: wandb_entity             entity
+Training: 2023-11-06 17:53:16,194-: wandb_project            project
+Training: 2023-11-06 17:53:16,194-: wandb_log_all            True
+Training: 2023-11-06 17:53:16,194-: save_artifacts           False
+Training: 2023-11-06 17:53:16,194-: wandb_resume             False
+Training: 2023-11-06 17:53:16,194-: rec                      train_dataset/ms1m-retinaface-t1
+Training: 2023-11-06 17:53:16,194-: num_classes              93431
+Training: 2023-11-06 17:53:16,194-: num_image                5179510
+Training: 2023-11-06 17:53:16,194-: num_epoch                20
+Training: 2023-11-06 17:53:16,194-: warmup_epoch             0
+Training: 2023-11-06 17:53:16,194-: val_targets              ['lfw', 'cfp_fp', 'agedb_30']
+Training: 2023-11-06 17:53:16,194-: total_batch_size         128
+Training: 2023-11-06 17:53:16,194-: warmup_step              0
+Training: 2023-11-06 17:53:16,194-: total_step               809280
+Training: 2023-11-06 17:54:18,946-rank_id: 0
+Training: 2023-11-06 17:54:22,311-: margin_list              [1.0, 0.5, 0.0]
+Training: 2023-11-06 17:54:22,311-: network                  r50
+Training: 2023-11-06 17:54:22,311-: resume                   False
+Training: 2023-11-06 17:54:22,311-: save_all_states          False
+Training: 2023-11-06 17:54:22,311-: output                   work_dirs\ms1mv3_r50_onegpu
+Training: 2023-11-06 17:54:22,312-: embedding_size           512
+Training: 2023-11-06 17:54:22,312-: sample_rate              1.0
+Training: 2023-11-06 17:54:22,312-: interclass_filtering_threshold0
+Training: 2023-11-06 17:54:22,312-: fp16                     True
+Training: 2023-11-06 17:54:22,312-: batch_size               128
+Training: 2023-11-06 17:54:22,312-: optimizer                sgd
+Training: 2023-11-06 17:54:22,312-: lr                       0.02
+Training: 2023-11-06 17:54:22,312-: momentum                 0.9
+Training: 2023-11-06 17:54:22,312-: weight_decay             0.0005
+Training: 2023-11-06 17:54:22,312-: verbose                  2000
+Training: 2023-11-06 17:54:22,313-: frequent                 10
+Training: 2023-11-06 17:54:22,313-: dali                     False
+Training: 2023-11-06 17:54:22,313-: dali_aug                 False
+Training: 2023-11-06 17:54:22,313-: gradient_acc             1
+Training: 2023-11-06 17:54:22,313-: seed                     2048
+Training: 2023-11-06 17:54:22,313-: num_workers              2
+Training: 2023-11-06 17:54:22,313-: wandb_key                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Training: 2023-11-06 17:54:22,314-: suffix_run_name          None
+Training: 2023-11-06 17:54:22,314-: using_wandb              False
+Training: 2023-11-06 17:54:22,314-: wandb_entity             entity
+Training: 2023-11-06 17:54:22,314-: wandb_project            project
+Training: 2023-11-06 17:54:22,314-: wandb_log_all            True
+Training: 2023-11-06 17:54:22,314-: save_artifacts           False
+Training: 2023-11-06 17:54:22,314-: wandb_resume             False
+Training: 2023-11-06 17:54:22,314-: rec                      train_dataset/ms1m-retinaface-t1
+Training: 2023-11-06 17:54:22,314-: num_classes              93431
+Training: 2023-11-06 17:54:22,315-: num_image                5179510
+Training: 2023-11-06 17:54:22,315-: num_epoch                20
+Training: 2023-11-06 17:54:22,315-: warmup_epoch             0
+Training: 2023-11-06 17:54:22,315-: val_targets              ['lfw', 'cfp_fp', 'agedb_30']
+Training: 2023-11-06 17:54:22,315-: total_batch_size         128
+Training: 2023-11-06 17:54:22,315-: warmup_step              0
+Training: 2023-11-06 17:54:22,315-: total_step               809280
+Training: 2023-11-06 17:55:14,251-rank_id: 0
+Training: 2023-11-06 17:55:17,448-: margin_list              [1.0, 0.5, 0.0]
+Training: 2023-11-06 17:55:17,448-: network                  r50
+Training: 2023-11-06 17:55:17,448-: resume                   False
+Training: 2023-11-06 17:55:17,448-: save_all_states          False
+Training: 2023-11-06 17:55:17,448-: output                   work_dirs\ms1mv3_r50_onegpu
+Training: 2023-11-06 17:55:17,450-: embedding_size           512
+Training: 2023-11-06 17:55:17,450-: sample_rate              1.0
+Training: 2023-11-06 17:55:17,450-: interclass_filtering_threshold0
+Training: 2023-11-06 17:55:17,450-: fp16                     True
+Training: 2023-11-06 17:55:17,450-: batch_size               128
+Training: 2023-11-06 17:55:17,450-: optimizer                sgd
+Training: 2023-11-06 17:55:17,450-: lr                       0.02
+Training: 2023-11-06 17:55:17,450-: momentum                 0.9
+Training: 2023-11-06 17:55:17,450-: weight_decay             0.0005
+Training: 2023-11-06 17:55:17,450-: verbose                  2000
+Training: 2023-11-06 17:55:17,450-: frequent                 10
+Training: 2023-11-06 17:55:17,450-: dali                     False
+Training: 2023-11-06 17:55:17,450-: dali_aug                 False
+Training: 2023-11-06 17:55:17,450-: gradient_acc             1
+Training: 2023-11-06 17:55:17,450-: seed                     2048
+Training: 2023-11-06 17:55:17,450-: num_workers              2
+Training: 2023-11-06 17:55:17,450-: wandb_key                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Training: 2023-11-06 17:55:17,450-: suffix_run_name          None
+Training: 2023-11-06 17:55:17,450-: using_wandb              False
+Training: 2023-11-06 17:55:17,450-: wandb_entity             entity
+Training: 2023-11-06 17:55:17,450-: wandb_project            project
+Training: 2023-11-06 17:55:17,450-: wandb_log_all            True
+Training: 2023-11-06 17:55:17,450-: save_artifacts           False
+Training: 2023-11-06 17:55:17,450-: wandb_resume             False
+Training: 2023-11-06 17:55:17,450-: rec                      train_dataset/ms1m-retinaface-t1
+Training: 2023-11-06 17:55:17,450-: num_classes              93431
+Training: 2023-11-06 17:55:17,450-: num_image                5179510
+Training: 2023-11-06 17:55:17,450-: num_epoch                20
+Training: 2023-11-06 17:55:17,450-: warmup_epoch             0
+Training: 2023-11-06 17:55:17,450-: val_targets              ['lfw', 'cfp_fp', 'agedb_30']
+Training: 2023-11-06 17:55:17,450-: total_batch_size         128
+Training: 2023-11-06 17:55:17,450-: warmup_step              0
+Training: 2023-11-06 17:55:17,450-: total_step               809280
